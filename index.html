@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>aloo ka janamdin</title>
+<style>
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  header {
+    background-color: #f8a500;
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  h1 {
+    margin: 0;
+    font-size: 3em;
+    color: white;
+  }
+  .birthday-image {
+    margin: 20px auto;
+    border-radius: 20px;
+    max-width: 80vw;
+    height: auto;
+    box-shadow: 0 0 15px #ff9900;
+  }
+  .message-box {
+    margin: 30px auto;
+    background-color: #fff3cc;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0 0 10px #ffbb33;
+  }
+  .interaction {
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #f8a500;
+    font-size: 1em;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #f8a500;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #cf7e00;
+  }
+  footer {
+    margin-top: 60px;
+    padding: 15px;
+    background-color: #f8a500;
+    color: white;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎉 aloo ka janamdin 🎉</h1>
+  <p>Happy 16th Birthday, Kaushiki!</p>
+</header>
+
+<img 
+  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QM0RXhpZgAATU0AKgAAAAgABwESAAMAAAABAAEAAIdpAAQAAAABAAAAYgAAAAD/2wBDAAICAgICAgMCAgIDAwMDBAYEBAQEBAQEBAQEBAQEBQYFBQUFBQUFBQYGBQYGBgYGBhwHBwcICQcIBwgKCgoKCgoMDAwMDAz/wAARCAOgA6ADASIAAhEBAxEB/8QAGgABAQEBAQEBAAAAAAAAAAAAAgFAQBAwYAB//EABwQAQABBQEAAAAAAAAAAAAAAAABAgMEBREhMf/aAAwDAQACEAMQAAABv48AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2Q==" 
+  alt="Kaushiki Birthday Picture" 
+  class="birthday-image" />
+
+<div class="message-box">
+  <h2>Message for Kaushiki</h2>
+  <p id="birthday-message">Kaushiki, you are amazing! Wishing you loads of happiness and fun as you turn 16 on December 6th! 🎂🎈</p>
+</div>
+
+<div class="interaction">
+  <h3>Write a birthday wish for Kaushiki:</h3>
+  <input type="text" id="user-wish" placeholder="Type your wish here..." />
+  <button onclick="submitWish()">Send Wish</button>
+  <p id="response" style="margin-top: 12px; font-weight: bold; color: #d35400;"></p>
+</div>
+
+<footer>
+  Made with ❤️ for Kaushiki's special day.
+</footer>
+
+<script>
+  function submitWish() {
+    const input = document.getElementById('user-wish');
+    const response = document.getElementById('response');
+    const wish = input.value.trim();
+    if (wish.length === 0) {
+      response.textContent = "Please write something to send Kaushiki a wish!";
+      return;
+    }
+    response.textContent = `Thank you for your wish: "${wish}"! Kaushiki will love it! 😊`;
+    input.value = "";
+  }
+</script>
+
+</body>
+</html>
